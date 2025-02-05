@@ -20,7 +20,10 @@ const authConfig = {
   },
 } satisfies NextAuthConfig
 
-export const { auth: middleware } = NextAuth(authConfig)
+export const { auth } = NextAuth(authConfig)
+
+// This is the key change - export the auth function directly as middleware
+export default auth
 
 export const config = {
   matcher: [

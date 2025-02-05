@@ -29,7 +29,7 @@ export default async function Home() {
 
   return (
     <div className="w-full max-w-[1700px] bg-background">
-      <CarouselBanner />
+      {/* <CarouselBanner /> */}
       <div className="w-[90%] mx-auto h-auto mt-5 px-4">
         <Reels />
         <h2
@@ -45,18 +45,18 @@ export default async function Home() {
             />
           ))}
           <Card className="w-full max-w-smr relative overflow-hidden min-h-[400px] transition-all hover:shadow-lg flex justify-center items-center">
-            <Image
+            {/* <Image
               src="/extraproduct.jpg"
               alt="Coming Soon"
               layout="fill"
               objectFit="cover"
               className="w-full h-full"
-            />
+            /> */}
             <h1 className="text-6xl xl:text-8xl text-center text-red-700 font-bold absolute">Coming <br className="" /> Soon</h1>
           </Card>
         </div>
       </div>
-      <Image
+      {/* <Image
         src="/photos/photo3.png"
         width={1000}
         height={1000}
@@ -70,7 +70,7 @@ export default async function Home() {
         height={1000}
         className="w-full h-auto"
         alt=""
-      />
+      /> */}
       <Review />
       <div className="mt-10 w-full h-[300px] px-10 flex flex-col gap-8 justify-center items-center">
         <p className="text-3xl md:text-5xl text-center font-semibold">
