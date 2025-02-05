@@ -1,14 +1,16 @@
-// api/coupons/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import Coupon from "@/lib/models/CouponModel";
 import dbConnect from "@/lib/dbConnect";
 
+// Mark this route as dynamic
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
-    await dbConnect(); // Connect to the database
+    await dbConnect();
 
     // Get the coupon code from the query parameters
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const code = searchParams.get("code");
 
     if (!code) {
